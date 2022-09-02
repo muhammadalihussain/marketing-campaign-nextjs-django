@@ -43,9 +43,9 @@ schema_view = get_schema_view(
 urlpatterns = [
 
     path('', TemplateView.as_view(template_name='index.html')),
-    path('signIn/', TemplateView.as_view(template_name='index.html')),
-    path('signUp/', TemplateView.as_view(template_name='index.html')),
-    path('home/', TemplateView.as_view(template_name='index.html')),
+    # path('signIn/', TemplateView.as_view(template_name='index.html')),
+    # path('signUp/', TemplateView.as_view(template_name='index.html')),
+    # path('home/', TemplateView.as_view(template_name='index.html')),
     
     #path('', schema_view.with_ui('swagger', cache_timeout=0),name='schema-swagger-ui'),
     
