@@ -1,0 +1,36 @@
+{
+  "name": "frontend",
+  "private": true,
+  "proxy": "http://127.0.0.1:8000/",
+  "scripts": {
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon --watch backend   --exec  cm-venv/Scripts/activate.ps1 --exec  python  manage.py runserver \" \" next dev\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "npm run build && del -f output static && next export -o output && mv output static && python app.py -d static"
+  },
+  "engines": {
+    "npm": "6.14.4",
+    "node": "16.13.1"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "concurrently": "^7.3.0",
+    "dateformat": "^5.0.3",
+    "dateformate": "^1.1.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "moment": "^2.29.4",
+    "next": "12.2.5",
+    "nodejs": "^0.0.0",
+    "nodemon": "^2.0.19",
+    "ps-node": "^0.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5"
+  }
+}
