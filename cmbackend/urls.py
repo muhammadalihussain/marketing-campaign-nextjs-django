@@ -43,7 +43,6 @@ schema_view = get_schema_view(
 urlpatterns = [
 
      path('', TemplateView.as_view(template_name='index.html')),
-     path('<slug:slug>/', TemplateView.as_view(template_name='index.html')),
 
      re_path(r'^/(?P<slug>[\w-]+)/$',  TemplateView.as_view(template_name='index.html')),
 
