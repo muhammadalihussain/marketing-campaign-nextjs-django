@@ -44,7 +44,8 @@ urlpatterns = [
 
      path('', TemplateView.as_view(template_name='index.html')),
 
-     re_path(r'^/(?P<slug>[\w-]+)/$',  TemplateView.as_view(template_name='index.html')),
+     path('/<str:slug>', TemplateView.as_view(template_name='index.html')),
+  
 
     path('signIn/', TemplateView.as_view(template_name='index.html')),
     path('signUp/', TemplateView.as_view(template_name='index.html')),
