@@ -7,6 +7,8 @@ import dateFormat from "dateformat";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import MyImage from "../constants/MyImage";
+
 export default function Home({ data, errors }) {
   useEffect(() => {}, []);
   const router = useRouter();
@@ -35,15 +37,16 @@ export default function Home({ data, errors }) {
               key={item.slug}
             >
               <div className={styles.imgContainer}>
-                <Image
+                <MyImage
                   className={styles.img}
                   src={
                     "https://res.cloudinary.com/test-cm-company/" + item.logo
                   }
+                  key={item.slug}
                   width={120}
                   height={120}
                   alt=""
-                ></Image>
+                ></MyImage>
               </div>
               <div className={styles.rightItem}>
                 <Link href={"/" + item.slug}>

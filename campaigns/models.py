@@ -19,6 +19,7 @@ class Campaign(models.Model):  # class name Campaign should singular with cap
    created_at=models.DateTimeField(auto_now_add=True)
    updated_at=models.DateTimeField(auto_now=True)
    logo=CloudinaryField("Image",overwrite=True,format='jpg')
+   #logo= models.ImageField(default="default.jpg", upload_to="itemImages")
    
    class Meta:
         ordering=('-created_at',) # -created_at means later decending order for pagination

@@ -3,5 +3,9 @@ module.exports = {
 
   images: {
     domains: ["res.cloudinary.com"],
+    loader: "custom",
+  },
+  Image: {
+    disableStaticImages: true,
   },
 };

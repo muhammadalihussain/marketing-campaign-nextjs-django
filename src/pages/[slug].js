@@ -8,6 +8,8 @@ import dateFormat from "dateformat";
 import { server } from "../constants/constants";
 import { FaCheckCircle } from "react-icons/fa";
 
+import MyImage from "../constants/MyImage";
+
 function Campaign({ data }) {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -59,7 +61,7 @@ function Campaign({ data }) {
           {!isSubmitted ? (
             <>
               <div classNameName={styles.imgContainer}>
-                <Image
+                <MyImage
                   className={styles.img_details}
                   src={
                     "https://res.cloudinary.com/test-cm-company/" + data.logo
@@ -67,7 +69,7 @@ function Campaign({ data }) {
                   width={120}
                   height={120}
                   alt=""
-                ></Image>
+                ></MyImage>
               </div>
               <div className={styles.wapper}>
                 <div className={styles.main_details}>
