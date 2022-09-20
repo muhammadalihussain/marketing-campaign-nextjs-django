@@ -43,7 +43,7 @@ schema_view = get_schema_view(
 urlpatterns = [
      
       path('', TemplateView.as_view(template_name='index.html')),
-      path("/<slug>", TemplateView.as_view(template_name='index.html')),
+     
   
     # path('signIn/', TemplateView.as_view(template_name='index.html')),
     # path('signUp/', TemplateView.as_view(template_name='index.html')),
@@ -53,4 +53,6 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('api/', include('campaigns.urls')),
+
+   re_path('^(?!static).*$', TemplateView.as_view(template_name='index.html')),
 ]
