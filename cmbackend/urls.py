@@ -41,12 +41,9 @@ schema_view = get_schema_view(
 
 
 urlpatterns = [
-      path("<slug:slug>", TemplateView.as_view(template_name='index.html')),
+     
       path('', TemplateView.as_view(template_name='index.html')),
-    
-  
-
-
+      path("<slug:slug>", TemplateView.as_view(template_name='index.html')),
   
     # path('signIn/', TemplateView.as_view(template_name='index.html')),
     # path('signUp/', TemplateView.as_view(template_name='index.html')),
