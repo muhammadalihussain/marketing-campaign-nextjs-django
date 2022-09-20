@@ -5,7 +5,7 @@
   "/about": "pages/about.html",
   "/api/hello": "pages/api/hello.js",
   "/contact": "pages/contact.html",
-  "/[slug]": "pages/[slug].js",
   "/": "pages/index.js",
+  "/[slug]": "pages/[slug].js",
   "/404": "pages/404.html"
 }
